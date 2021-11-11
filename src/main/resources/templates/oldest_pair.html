@@ -1,0 +1,21 @@
+<table xmlns:th="http://www.w3.org/1999/xhtml">
+    <thead>
+    <tr>
+        <th> Employee ID #1</th>
+        <th> Employee ID #2</th>
+        <th> Project ID</th>
+        <th> Days Worked</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${oldestPairList.empty}">
+        <td colspan="2"> No Books Available</td>
+    </tr>
+    <tr th:each="pair : ${oldestPairList}">
+        <td><span th:text="${pair.employee1}"> Employee ID #1 </span></td>
+        <td><span th:text="${pair.employee2}"> Employee ID #2 </span></td>
+        <td><span th:text="${pair.projectId}"> Project ID </span></td>
+        <td><span th:text="${pair.totalWorkingDays}"> Days Worked </span></td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<h3>Form with file chooser to submit employees file</h3>
+<form action="#" enctype="multipart/form-data" method="post" th:action="@{/submit-file}">
+    <label for="file">Select a file:</label>
+    <input id="file" name="file" type="file"><br><br>
+    <p><input type="submit" value="Submit"/></p>
+</form>
+</body>
+</html>
